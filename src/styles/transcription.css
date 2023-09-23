@@ -1,0 +1,108 @@
+
+
+#contentWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    gap: 25px; /* Spacing between elements */
+}
+
+#transcriptionBox {
+    padding: 10px;  /* Adjust as needed */
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding-right: 50px;
+    border: none;
+    /* Your existing styles for transcriptionBox */
+    width: 32%; /* Adjust width to your preference */
+    height: 70%;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    resize: none; 
+    z-index: 9999; /* Ensures it's on top of other content */
+}
+
+@media (max-width: 768px) {
+    #transcriptionBox {
+        display: none;
+    }
+}
+
+#transcriptionBox:focus {
+    outline: none;
+}
+
+#transcriptionBox {
+    padding-right: 15px; /* add space for the scrollbar */
+    box-sizing: border-box; /* ensures padding doesn't expand the box */
+}
+
+#transcriptionBox::-webkit-scrollbar {
+    width: 10px; /* adjust this value as needed for the width of the scrollbar */
+}
+
+#transcriptionBox::-webkit-scrollbar-track {
+    background: #f1f1f1; /* adjust this value as needed for the track background color */
+}
+
+#transcriptionBox::-webkit-scrollbar-thumb {
+    background: #888; /* adjust this value as needed for the thumb color */
+}
+
+#transcriptionBox::-webkit-scrollbar-thumb:hover {
+    background: #555; /* adjust this value as needed for the thumb color on hover */
+}
+
+#extensionInstructions {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    transform: translateY(-60%);
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+#extensionInstructions h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#extensionInstructions ol {
+    padding-left: 20px;
+}
+
+#extensionInstructions li {
+    margin-bottom: 10px;
+}
+
+#extensionInstructions a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#extensionInstructions a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #extensionInstructions {
+        display: none;
+    }
+}
+
+#extensionInstructions {
+    z-index: 9000;
+}

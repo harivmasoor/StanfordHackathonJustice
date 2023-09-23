@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Podify - Your go-to place for streaming podcasts and music from Spotify." />
+    
+    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="src/styles/searchBar.css" />
+    <link rel="stylesheet" href="src/styles/loginButton.css" />
+    <link rel="stylesheet" href="src/styles/webPlayer.css" />
+    <link rel="stylesheet" href="src/styles/transcription.css" />
+    <link rel="icon" type="image/png" href="assets/podify.png" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <title>Podify</title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/podify.png" alt="Podify Logo" id="logo" />
+        <p><a href="https://vimeo.com/862475153" target="_blank" rel="noopener noreferrer">Demo of</a> Podify after Spotify Premium login and whitelist<p>
+    </header>
+    <div id="extensionInstructions">
+        <h3>Unlock Transcription Features</h3>
+        <ol>
+            <li><a href="https://chrome.google.com/webstore/detail/podify-magic-transcriber/mgobhppcmnbddmlmeofgfhdmfkhkjggp" target="_blank" rel="noopener noreferrer">Download the Podify Magic Transcriber</a> from the Chrome Web Store.</li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeASJkcRJgqaNwjj8hTrKHZCCrF5_mM9Ak_sOZ3DZIIKkgjVg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Enter your email linked to your Spotify Premium account to join the whitelist</a> features won't be active until then</li>
+            <li>Add the extension to Chrome.</li>
+            <li>Click on the extension icon in the Chrome toolbar when on the Podify tab.</li>
+            <li>Click "Start Recording" in the new popup window to begin transcription.</li>
+        </ol>
+    </div>
+    
+    <div id="searchResults" role="listbox"></div>
+    <main>
+        <div id="contentWrapper">
+        <section id="center-container">
+            <h2>Hello</h2>
+            <p id="username"></p>
+            <button id="loginButton">Log in with Spotify</button>
+        </section>
+        
+        <section id="search-container">
+            <input type="text" id="searchInput" placeholder="Search podcasts and songs" aria-label="Search Bar"/>
+
+        </section>
+
+        <section id="currentlyPlaying">
+            <img id="currentImage" src="" alt="Currently playing image">
+            <p id="currentTitle"></p>
+            <!-- Updated the ID for Spotify Logo -->
+        </section>    
+        <div id="timeContainer">
+            <span id="currentTime">00:00</span> <img src="assets/spotify.svg" alt="Spotify Logo" id="spotifyLogo" /> <span id="totalTime">00:00</span>
+        </div>
+        <div id="webPlayer">
+            <div id="muteContainer">
+                <button id="mute" aria-label="Mute">Mute</button>
+            </div>            
+            <div id="seekBarContainer">
+                <input type="range" id="seekBar" min="0" value="0" step="1">
+            </div>        
+            <div class="playerControls">
+                <button id="rewind" aria-label="Rewind">
+                    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="23" stroke="black" stroke-width="2" fill="none"/>
+                        <path d="M 30 15 L 15 25 L 30 35 L 30 15" fill="black"/>
+                        <path d="M 20 15 L 5 25 L 20 35 L 20 15" fill="black"/>
+                    </svg>                    
+                </button>
+                <button id="playPause" aria-label="Play or Pause">
+                    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="23" stroke="black" stroke-width="2" fill="none"/>
+                        <path d="M 20 15 L 20 35 L 35 25 L 20 15" fill="black"/></svg>                    
+                </button>
+                
+                <button id="fastForward" aria-label="Fast Forward">
+                    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="23" stroke="black" stroke-width="2" fill="none"/>
+                        <path d="M 20 15 L 35 25 L 20 35 L 20 15" fill="black"/>
+                        <path d="M 30 15 L 45 25 L 30 35 L 30 15" fill="black"/>
+                    </svg>                    
+                </button>
+            </div>
+            <div class="nowPlaying">
+                <span id="trackName"></span>
+            </div>
+        </div> 
+    </div>
+    <textarea id="transcriptionBox" readonly></textarea>
+    </main>
+    <footer id="footer">
+        <a href="https://www.linkedin.com/in/harimasoor/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-icon" src="assets/linkedin-icon.png" alt="LinkedIn Icon"></a>
+        <a href="https://github.com/harivmasoor/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-icon" src="assets/github-icon.png" alt="Github Icon"></a>
+    </footer>
+    <script src="./dist/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+#searchInput {
+    margin-top: 50px;
+    /* margin-left: -35px; */
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    transition: border 0.3s; /* Add transition */
+    margin-left: -15px;
+}
+
+input:-webkit-autofill {
+    border: 1px solid #ccc;
+    -webkit-text-fill-color: currentColor;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+#searchInput:focus {
+    border-color: #1DB954;  /* Provide a hint of focus with Spotify green color */
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.2);  /* Gentle shadow to improve focus visibility */
+}
+
+
+#searchResults {
+    display: block;
+    border: none;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    position: absolute;
+    /* top: 80px; */
+    left: 0;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 9100;
+    /* font-family: 'Arial Rounded MT Bold', sans-serif; */
+    transition: opacity 0.3s, visibility 0.3s; /* Add transition */
+}
+
+#searchResults div {
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    display: flex;  /* Use flexbox for aligning content */
+    align-items: center;  /* Vertically center content */
+}
+
+#searchResults div:last-child {
+    border-bottom: none;
+}
+
+#searchResults div:hover {
+    background-color: #f6f6f6;
+}
+
+#searchResults img {
+    width: 50px;  /* Image size */
+    height: 50px;  /* Image size */
+    border-radius: 50%;  /* Circle crop */
+    object-fit: cover;  /* Make sure the image covers the space without stretching */
+}
+
+.resultItem {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.resultItem:last-child {
+    border-bottom: none;
+}
+
+.resultItem:hover {
+    background-color: #f6f6f6;
+}
+
+#search-container {
+    display: block !important;
+    width: 30%;
+}
+
+#searchResults div, 
+.resultItem {
+    padding-left: 4%;  /* Shift content to the right */
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    display: flex;  /* Use flexbox for aligning content */
+    align-items: center;  /* Vertically center content */
+}
+
+.resultHeader {
+    padding-left: 3%;
+}
