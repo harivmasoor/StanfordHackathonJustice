@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
     "watch": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
   },
@@ -34,6 +35,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "devDependencies": {
+    "webpack-dev-server": "^4.15.1"
+  }
 }
-
